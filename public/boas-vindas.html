@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Laboratório de Pesquisa!</h1>
+    </header>
+    
+    <main>
+        <h2 id="welcome-message"></h2>
+    </main>
+
+    <script>
+        // Recupera o nome do usuário da URL
+        const params = new URLSearchParams(window.location.search);
+        const username = params.get("nome");
+
+        // Exibe a mensagem de boas-vindas
+        if (username) {
+            document.getElementById("welcome-message").textContent = `Olá, ${username}! Seja bem-vindo!`;
+            console.log("Login Efetuado - BOAS VINDAS");
+        } else {
+            document.getElementById("welcome-message").textContent = "Usuário não encontrado!";
+            console.log("SEM USERNAME - BOAS VINDAS");
+        }
+    </script>
+</body>
+</html>

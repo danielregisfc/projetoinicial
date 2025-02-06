@@ -1,0 +1,186 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 1rem;
+}
+
+header {
+    background: linear-gradient(135deg, #004d99, #002b66);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: white;
+    margin: 2rem auto;
+    width: 80%;
+    border-radius: 0.75rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.section-img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons {
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.icon img {
+    width: 2rem;
+    margin: 0 0.625rem;
+    transition: transform 0.3s, filter 0.3s;
+    filter: brightness(0.8);
+}
+
+.icon img:hover {
+    transform: scale(1.2);
+    filter: brightness(1);
+}
+
+
+/* Estilo do modal */
+.modal {
+    display: none; /* O modal está escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente, mais escuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out; /* Animação suave ao aparecer */
+  }
+  
+  /* Animação de fade in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Estilo do conteúdo do modal */
+  .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%; /* Garante que o modal não ocupe toda a tela em dispositivos pequenos */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave para dar um efeito de elevação */
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Título do modal */
+  .modal-content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Estilo dos inputs */
+  .modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border 0.3s ease;
+  }
+  
+  /* Efeito no foco dos inputs */
+  .modal-content input:focus {
+    border-color: #007BFF; /* Cor azul quando o campo estiver em foco */
+    outline: none;
+  }
+  
+  /* Estilo do botão de enviar */
+  .modal-content button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo do botão de fechar (X) */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #888;
+    background: transparent;
+    border: none;
+  }
+  
+  /* Efeito ao passar o mouse sobre o botão de fechar */
+  .close-btn:hover {
+    color: #333;
+  }
+  
